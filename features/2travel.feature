@@ -73,3 +73,7 @@ Scenario: Register a user on site fail
 	When I press the Submit button
     Then the login unsuccessfully message is displayed
 
+Scenario: Support button displays construction message       
+	Given I am on the Mercury Tours homepage
+	And I click the "SUPPORT" link
+    Then the construction message is displayed
