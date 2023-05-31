@@ -44,10 +44,11 @@ Scenario: Book a flight
     When I press the Continue button
     Then the no seats avaiable message is displayed
 
+@bmbtest
 Scenario: Book a customized flight
     Given I am on the Mercury Tours homepage
     And I click the "Flights" link
-    When I enter the required fields as show below
+    When I enter the required fields as show below for my flight
     | Type:          | One Way            |
     | Passengers:    | 2                  |
     | Departing From:| London             |
