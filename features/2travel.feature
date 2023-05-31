@@ -83,3 +83,4 @@ Scenario: Construction message back to home
 	And I click the "SUPPORT" link
     And the construction message is displayed
     Then I am on the Mercury Tours homepage
+
