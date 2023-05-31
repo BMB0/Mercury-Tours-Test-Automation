@@ -1,7 +1,6 @@
 Given(/^I am on the Mercury Tours homepage$/) do
-     page.driver.browser.manage.window.maximize
-     visit('http://demo.guru99.com/test/newtours/')
-
+    page.driver.browser.manage.window.maximize
+    visit('http://demo.guru99.com/test/newtours/')
 end
 
 Given(/^I click the "([^"]*)" link$/) do |linkText|
@@ -103,10 +102,6 @@ When(/^I press the Continue button$/) do
   find(:xpath, xpath).click
 end
 
-# Then the no seats avaiable message is displayed
-# Then(/^the login successfully message is displayed$/) do
-#   expect(page).to have_content("Login Successfully")
-#   puts "ONLY FOR TEST  PURPOSES"
-#   puts find(:css, 'body > div:nth-child(5) > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(3) > td > p:nth-child(1) > font > b').text
-#   puts find(:xpath,'/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[3]/td/p[1]/font/b').text
-# end
+Then('the no seats avaiable message is displayed') do
+  expect(page).to have_content("After flight finder - No Seats Avaialble")
+end
