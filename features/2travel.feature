@@ -44,3 +44,17 @@ Scenario: Book a flight
     And I click the "Flights" link
     When I press the Continue button
     Then the no seats avaiable message is displayed
+
+Scenario: Back to home when Book a flight failed
+    Given I am on the Mercury Tours homepage
+    And I click the "Flights" link
+    When I press the Continue button
+    And the no seats avaiable message is displayed
+    Then I am on the Mercury Tours homepage
+
+Scenario: Back to home when Book a flight failed
+    Given I am on the Mercury Tours homepage
+    And I click the "Flights" link
+    When I press the Continue button
+    And the no seats avaiable message is displayed
+    Then I am on the Mercury Tours homepage
