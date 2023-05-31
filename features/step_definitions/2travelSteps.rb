@@ -103,10 +103,10 @@ When(/^I press the Continue button$/) do
   find(:xpath, xpath).click
 end
 
-Then the no seats avaiable message is displayed
-Then(/^the login successfully message is displayed$/) do
-  expect(page).to have_content("Login Successfully")
-  puts "ONLY FOR TEST  PURPOSES"
-  puts find(:css, 'body > div:nth-child(5) > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(3) > td > p:nth-child(1) > font > b').text
-  puts find(:xpath,'/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[3]/td/p[1]/font/b').text
-end
+# Then the no seats avaiable message is displayed
+# Then(/^the login successfully message is displayed$/) do
+#   expect(page).to have_content("Login Successfully")
+#   puts "ONLY FOR TEST  PURPOSES"
+#   puts find(:css, 'body > div:nth-child(5) > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(3) > td > p:nth-child(1) > font > b').text
+#   puts find(:xpath,'/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[3]/td/p[1]/font/b').text
+# end
