@@ -52,9 +52,10 @@ Scenario: Back to home when Book a flight failed
     And the no seats avaiable message is displayed
     Then I am on the Mercury Tours homepage
 
-Scenario: Back to home when Book a flight failed
-    Given I am on the Mercury Tours homepage
-    And I click the "Flights" link
-    When I press the Continue button
-    And the no seats avaiable message is displayed
-    Then I am on the Mercury Tours homepage
+Scenario: Register a user on site fail        
+	Given I am on the Mercury Tours homepage
+	And I click the "SIGN-ON" link
+	And I enter another user and password
+	When I press the Submit button
+    Then the login unsuccessfully message is displayed
+
