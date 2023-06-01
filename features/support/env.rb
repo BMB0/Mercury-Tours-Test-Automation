@@ -3,11 +3,11 @@ require 'capybara'
 require 'capybara/dsl'
 require 'capybara/cucumber'
 require 'capybara-screenshot/cucumber'
+require_relative 'shared_steps'
 
 #PTravel Settings
 ENV['USER']="Pepazo"
 ENV['PSW']="ILoveQA"
-
 
 Capybara.default_driver = :selenium
 
