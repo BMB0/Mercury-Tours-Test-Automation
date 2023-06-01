@@ -1,7 +1,7 @@
-Feature: Mercury Tours Verify Sign-On
-  In order to book a flight in Mercury site
-  As a customer
-  I want to register on the site
+Feature: Mercury Tours Sign-On
+  In order to access my account in Mercury Tours
+  As a registered user
+  I want to sign on to the website
 
 Scenario: Sign-On a user on site        
 	Given I am on the Mercury Tours homepage

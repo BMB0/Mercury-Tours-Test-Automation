@@ -1,7 +1,7 @@
-Feature: Mercury Tours Verify Registration
-  In order to book a flight in Mercury site
-  As a customer
-  I want to register on the site
+Feature: Mercury Tours Register User
+  In order to create an account on Mercury Tours
+  As a new user
+  I want to register on the website
 
 
 Scenario: Register a user on site        

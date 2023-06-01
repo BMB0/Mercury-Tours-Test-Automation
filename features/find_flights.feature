@@ -1,7 +1,7 @@
-Feature: Mercury Tours Verify Registration
-  In order to book a flight in Mercury site
+Feature: Mercury Tours Find Flights
+  In order to book a flight on Mercury Tours
   As a customer
-  I want to register on the site
+  I want to search for available flights
 
 #escenario incompleto
 Scenario: Find a flight with a register user
