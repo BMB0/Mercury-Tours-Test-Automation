@@ -8,4 +8,4 @@ Scenario: Sign-On a user on site
 	And I click the "SIGN-ON" link
 	And I enter my user and password
 	When I press the Submit button
-    Then the login successfully message is displayed
+  Then the login successfully message is displayed
