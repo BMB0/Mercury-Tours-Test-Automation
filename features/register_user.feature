@@ -24,10 +24,11 @@ Scenario: Register a user on site
 	Then the confirmation screen is show
 	And my user name is "Pepazo"
 
+#Paso 3 no es claro
 Scenario: Register a user on site fail        
 	Given I am on the Mercury Tours homepage
 	And I click the "SIGN-ON" link
 	And I enter another user and password
 	When I press the Submit button
-    Then the login unsuccessfully message is displayed
+  Then the login unsuccessfully message is displayed
 
