@@ -8,6 +8,8 @@ require_relative 'shared_steps'
 # PTravel Settings
 ENV['USER'] = 'Pepazo'
 ENV['PSW'] = 'ILoveQA'
+ENV['FALSE_USER'] = 'Lufercho'
+ENV['FALSE_PSW'] = 'IDoNotLoveQA'
 
 Capybara.default_driver = :selenium
 
