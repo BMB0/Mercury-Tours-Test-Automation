@@ -86,3 +86,17 @@ Scenario: Find a flight on a non-existent day
     | Airline:       | Blue Skies Airlines  |
     When I press the Continue button
     Then the "Invalid Date" message is displayed
+Scenario: Find a flight on a non-existent day
+    Given I am on the Mercury Tours homepage
+    And I click the "Flights" link
+    And I enter the required fields as show below for my flight
+    | Type:          | Round Trip           |
+    | Passengers:    |                      |
+    | Departing From:| San Francisco        |
+    | On:            |                      |
+    | Arriving In:   | Seattle              |
+    | Returning:     | April 10             |
+    | Service Class: |       |
+    | Airline:       | Blue Skies Airlines  |
+    When I press the Continue button
+    Then the "Invalid Date" message is displayed
