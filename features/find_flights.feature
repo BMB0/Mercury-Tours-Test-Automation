@@ -90,13 +90,16 @@ Scenario: Find a flight on a non-existent day
     Given I am on the Mercury Tours homepage
     And I click the "Flights" link
     And I enter the required fields as show below for my flight
-    | Type:          | Round Trip           |
+    | Type:          |                      |
     | Passengers:    |                      |
-    | Departing From:| San Francisco        |
+    | Departing From:|                      |
     | On:            |                      |
-    | Arriving In:   | Seattle              |
-    | Returning:     | April 10             |
-    | Service Class: |       |
-    | Airline:       | Blue Skies Airlines  |
+    | Arriving In:   |                      |
+    | Returning:     |                      |
+    | Service Class: |                      |
+    | Airline:       |                      |
     When I press the Continue button
     Then the "Invalid Date" message is displayed
+  Then(/^the put valid inputs message is displayed$/) do
+  expect(page).to have_content("please fill all missing boxes")
+end
