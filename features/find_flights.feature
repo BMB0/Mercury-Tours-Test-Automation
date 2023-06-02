@@ -96,7 +96,7 @@ Scenario: Find a flight on a non-existent day
     | On:            |                      |
     | Arriving In:   |                      |
     | Returning:     |                      |
-    | Service Class: |                      |
+    | Service Class: |                       |
     | Airline:       |                      |
     When I press the Continue button
     Then the "Invalid Date" message is displayed
