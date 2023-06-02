@@ -53,7 +53,7 @@ Scenario: Register a user on site
     |Email: 	          |                    |
     |Address:           |                    |	
     |City: 	            |                    |
-    |State/Province:    |                     | 	
+    |State/Province:    |                    | 	
     |Postal Code: 	    |                    |
     |Country: 	        |                    |
     |User Name: 	      |                    |
