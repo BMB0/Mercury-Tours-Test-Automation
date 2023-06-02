@@ -71,3 +71,6 @@ When(/^I press the Submit button$/) do
   xpath = '/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[4]/td/input'
   find(:xpath, xpath).click
 end
+Then(/^the put valid inputs message is displayed$/) do
+  expect(page).to have_content("please fill all missing boxes")
+end
