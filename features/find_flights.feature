@@ -3,12 +3,20 @@ Feature: Mercury Tours Find Flights
   As a customer
   I want to search for available flights
 
-#escenario incompleto
+@log_in_user
 Scenario: Find a flight with a register user
-    Given I am on the Mercury Tours homepage
-    And I enter my user and password
-    When I press the "Sign-In" button
-    Then the login successfully message is displayed
+    Given I click the "Flights" link
+    Given I enter the required fields as show below for my flight
+    | Type:          | One Way          |
+    | Passengers:    | 3                |
+    | Departing From:| San Francisco    |
+    | On:            | June 10          |
+    | Arriving In:   | Seattle          |
+    | Returning:     | June 15          |
+    | Service Class: | First Class      |
+    | Airline:       | Pangea Airlines  |
+    And I press the Continue button
+    Then the no seats avaiable message is displayed
 
 Scenario: Book a flight
     Given I am on the Mercury Tours homepage
@@ -16,7 +24,6 @@ Scenario: Book a flight
     When I press the Continue button
     Then the no seats avaiable message is displayed
 
-@xyz
 Scenario: Book a customized flight
     Given I am on the Mercury Tours homepage
     Given I click the "Flights" link
