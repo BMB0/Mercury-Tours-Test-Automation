@@ -40,8 +40,7 @@ Scenario: Register a user on site
     |Password:          | ILoveQA            | 
     |Confirm Password:  |                    |
 	And send my registration form
-	Then the confirmation screen is show
-	And my user name is "Pepazo"
+	Then the put valid inputs message is displayed
 
 Scenario: Register a user on site        
 	Given I am on the Mercury Tours homepage
@@ -60,8 +59,6 @@ Scenario: Register a user on site
     |Password:          |                    | 
     |Confirm Password:  |                    |
 	And send my registration form
-	Then the confirmation screen is show
-	And my user name is "Pepazo"
-
+	Then the put valid inputs message is displayed
 
 
