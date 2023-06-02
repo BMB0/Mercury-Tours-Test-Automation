@@ -3,7 +3,6 @@ Feature: Mercury Tours Register User
   As a new user
   I want to register on the website
 
-
 Scenario: Register a user on site        
 	Given I am on the Mercury Tours homepage
 	And I click the "Register" link
@@ -43,6 +42,7 @@ Scenario: Register a user on site
 	And send my registration form
 	Then the confirmation screen is show
 	And my user name is "Pepazo"
+
 Scenario: Register a user on site        
 	Given I am on the Mercury Tours homepage
 	And I click the "Register" link

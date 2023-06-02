@@ -3,7 +3,6 @@ Feature: Mercury Tours Access Vacations
   As a customer
   I want to access the vacations section of the website
 
-
 Scenario: Accessing Vacations Page      
   Given I am on the Mercury Tours homepage
   When I click the "Vacations" link
