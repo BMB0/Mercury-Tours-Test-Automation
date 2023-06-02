@@ -3,13 +3,13 @@ Feature: Mercury Tours Access Support
   As a customer
   I want to access the support section of the website
 
-Scenario: Support button displays construction message       
-	Given I am on the Mercury Tours homepage
-	And I click the "SUPPORT" link
-    Then the construction message is displayed
+Scenario: Accessing Vacations Page      
+  Given I am on the Mercury Tours homepage
+  When I click the "SUPPORT" link
+  Then the "UNDER CONSTRUCTION" image is displayed
 
-Scenario: Construction message back to home      
-	Given I am on the Mercury Tours homepage
-	And I click the "SUPPORT" link
-    And the construction message is displayed
-    Then I am on the Mercury Tours homepage
+@log_in_user
+Scenario: Accessing Vacations Page as a logged-in user   
+  Given I am on the Mercury Tours homepage
+  When I click the "SUPPORT" link
+  Then the "UNDER CONSTRUCTION" image is displayed
