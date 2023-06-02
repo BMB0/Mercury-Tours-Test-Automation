@@ -43,6 +43,25 @@ Scenario: Register a user on site
 	And send my registration form
 	Then the confirmation screen is show
 	And my user name is "Pepazo"
+Scenario: Register a user on site        
+	Given I am on the Mercury Tours homepage
+	And I click the "Register" link
+	When I enter the required fields as show below
+	|First Name: 	        |                    |
+    |Last Name: 	      |                    |
+    |Phone: 	          |                    |
+    |Email: 	          |                    |
+    |Address:           |                    |	
+    |City: 	            |                    |
+    |State/Province:    |                    | 	
+    |Postal Code: 	    |                    |
+    |Country: 	        |                    |
+    |User Name: 	      |                    |
+    |Password:          |                    | 
+    |Confirm Password:  |                    |
+	And send my registration form
+	Then the confirmation screen is show
+	And my user name is "Pepazo"
 
 
 
