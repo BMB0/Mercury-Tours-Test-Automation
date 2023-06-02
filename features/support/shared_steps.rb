@@ -17,6 +17,11 @@ Given(/^I enter my user and password$/) do
   fill_in 'password', with: ENV['PSW']
 end
 
+Given(/^I enter my invalid user and my invalid password$/) do
+  fill_in 'userName', with: ENV['INVALID_USER']
+  fill_in 'password', with: ENV['INVALID_PSW']
+end
+
 Given(/^I enter my user$/) do
   fill_in 'userName', with: ENV['USER']
 end
