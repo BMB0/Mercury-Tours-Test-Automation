@@ -4,9 +4,10 @@ Feature: Mercury Tours Find Flights
   I want to search for available flights
 
 @log_in_user
-Scenario: Find a flight with a register user
-    Given I click the "Flights" link
-    Given I enter the required fields as show below for my flight
+Scenario: Find a flight with a logged-in user
+    Given I am on the Mercury Tours homepage
+    And I click the "Flights" link
+    And I enter the required fields as show below for my flight
     | Type:          | One Way          |
     | Passengers:    | 3                |
     | Departing From:| San Francisco    |
@@ -15,35 +16,44 @@ Scenario: Find a flight with a register user
     | Returning:     | June 15          |
     | Service Class: | First Class      |
     | Airline:       | Pangea Airlines  |
-    And I press the Continue button
-    Then the no seats avaiable message is displayed
+    When I press the Continue button
+    Then the "No Seats Avaialble" message is displayed
 
-Scenario: Book a flight
+Scenario: Find a flight
     Given I am on the Mercury Tours homepage
     And I click the "Flights" link
+    And I enter the required fields as show below for my flight
+    | Type:          | Round Trip       |
+    | Passengers:    | 4                |
+    | Departing From:| San Francisco    |
+    | On:            | May 10           |
+    | Arriving In:   | Seattle          |
+    | Returning:     | April 10         |
+    | Service Class: | Business Class   |
+    | Airline:       | Pangea Airlines  |
     When I press the Continue button
-    Then the no seats avaiable message is displayed
+    Then the "No Seats Avaialble" message is displayed
 
-Scenario: Book a customized flight
+Scenario: Invalid Flight Search - Departure and Arrival are the same place
     Given I am on the Mercury Tours homepage
     Given I click the "Flights" link
     Given I enter the required fields as show below for my flight
-    | Type:          | One Way            |
+    | Type:          | Round Trip         |
     | Passengers:    | 2                  |
     | Departing From:| London             |
     | On:            | June 10            |
-    | Arriving In:   | New York           |
+    | Arriving In:   | London             |
     | Returning:     | June 15            |
     | Service Class: | First Class        |
     | Airline:       | Pangea Airlines    |
     And I press the Continue button
-    Then the no seats avaiable message is displayed
+    Then the "No Seats Avaialble" message is displayed
 
-Scenario: Return to home page when booking a flight fails
+Scenario: Return to home page when finding a flight fails
     Given I am on the Mercury Tours homepage
     And I click the "Flights" link
     And I press the Continue button
-    And the no seats avaiable message is displayed
+    And the "No Seats Avaialble" message is displayed
     When I click the "Back to Home" image
     Then I am on the Mercury Tours homepage
 
@@ -60,4 +70,19 @@ Scenario: Invalid Flight Search - Departure Date After Arrival Date
     | Service Class: | First Class        |
     | Airline:       | Pangea Airlines    |
   And I press the Continue button
-  Then I should see an error message indicating invalid date range
+  Then the "Invalid Date Range" message is displayed
+
+Scenario: Find a flight on a non-existent day
+    Given I am on the Mercury Tours homepage
+    And I click the "Flights" link
+    And I enter the required fields as show below for my flight
+    | Type:          | Round Trip           |
+    | Passengers:    | 4                    |
+    | Departing From:| San Francisco        |
+    | On:            | February 31          |
+    | Arriving In:   | Seattle              |
+    | Returning:     | April 10             |
+    | Service Class: | Business Class       |
+    | Airline:       | Blue Skies Airlines  |
+    When I press the Continue button
+    Then the "Invalid Date" message is displayed
