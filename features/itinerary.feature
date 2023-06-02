@@ -8,3 +8,10 @@ Scenario: Accessing Itinerary Page
   When I click the "Flights" link
   And I click the "ITINERARY" link
   Then the "UNDER CONSTRUCTION" image is displayed
+
+@log_in_user
+Scenario: Accessing Itinerary Page
+  Given I am on the Mercury Tours homepage
+  When I click the "Flights" link
+  And I click the "ITINERARY" link
+  Then the "UNDER CONSTRUCTION" image is displayed
