@@ -30,3 +30,10 @@ Scenario: Sign On fails without entering a password
   And I enter my user
   When I press the Submit button
   Then the Enter your userName and password correct is diplayed
+
+Scenario: Sign On fails without entering a username
+  Given I am on the Mercury Tours homepage
+  And I click the "SIGN-ON" link
+  And I enter my password
+  When I press the Submit button
+  Then the Enter your userName and password correct is diplayed
