@@ -156,7 +156,7 @@ Scenario: Register a user on site missing Address
 	And send my registration form
 	Then the put valid inputs message is displayed
 
-Scenario: Register a user on site missing Address      
+Scenario: Register a user on site missing City      
 	Given I am on the Mercury Tours homepage
 	And I click the "Register" link
 	When I enter the required fields as show below
@@ -167,6 +167,25 @@ Scenario: Register a user on site missing Address
     |Address:          | Av. America #123   |
     |City: 	           |                    |
     |State/Province:   | Cochabamba         | 	
+    |Postal Code: 	   | 9897               |
+    |Country: 	       | BOLIVIA            |
+    |User Name: 	     | Pepazo             |
+    |Password:         | ILoveQA            | 
+    |Confirm Password: | ILoveQA            |
+	And send my registration form
+	Then the put valid inputs message is displayed
+
+Scenario: Register a user on site missing State      
+	Given I am on the Mercury Tours homepage
+	And I click the "Register" link
+	When I enter the required fields as show below
+	  |First Name: 	     | Pepito             |
+    |Last Name: 	     | Perez              |
+    |Phone: 	         | 1234-567-12        |
+    |Email: 	         | pepe@pepazo.com    |
+    |Address:          | Av. America #123   |
+    |City: 	           | Cochabamba         |
+    |State/Province:   |                    | 	
     |Postal Code: 	   | 9897               |
     |Country: 	       | BOLIVIA            |
     |User Name: 	     | Pepazo             |
