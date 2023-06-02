@@ -67,11 +67,6 @@ Then(/^my user name is "([^"]*)"$/) do |userName|
             '/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[3]/td/p[3]/font/b').text
 end
 
-When(/^I press the "([^"]*)" button$/) do |_arg1|
-  xpath = '/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[2]/td[3]/form/table/tbody/tr[4]/td/table/tbody/tr[4]/td[2]/div/input'
-  find(:xpath, xpath).click
-end
-
 When(/^I press the Submit button$/) do
   xpath = '/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[4]/td/input'
   find(:xpath, xpath).click

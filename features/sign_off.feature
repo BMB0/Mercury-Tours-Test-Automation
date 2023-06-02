@@ -3,8 +3,10 @@ Feature: Mercury Tours Sign-Off
   As a registered user
   I want to sign off the website
 
-  Scenario: Sign-Off a user on site fail        
-	Given I am on the Mercury Tours register
-	And I click the "SIGN-OFF" link
-	When I press the Submit button
-    Then the home page display 
+Scenario: Sign-Off a user off the site       
+  Given I am on the Mercury Tours homepage
+  And I click the "SIGN-ON" link
+  And I enter my user and password
+  And I press the Submit button
+  When I press the "SIGN-OFF" link
+  Then the home page display 

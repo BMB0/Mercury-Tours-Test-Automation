@@ -1,7 +1,3 @@
-Given(/^I enter my user and password$/) do
-  fill_in 'userName', with: ENV['USER']
-  fill_in 'password', with: ENV['PSW']
-end
 
 Given(/^I enter a false user and a false password$/) do
   fill_in 'userName', with: ENV['FALSE_USER']
