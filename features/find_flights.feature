@@ -38,11 +38,11 @@ Scenario: Invalid Flight Search - Departure and Arrival are the same place
     Given I am on the Mercury Tours homepage
     Given I click the "Flights" link
     Given I enter the required fields as show below for my flight
-    | Type:          | One Way            |
+    | Type:          | Round Trip         |
     | Passengers:    | 2                  |
     | Departing From:| London             |
     | On:            | June 10            |
-    | Arriving In:   | New York           |
+    | Arriving In:   | London             |
     | Returning:     | June 15            |
     | Service Class: | First Class        |
     | Airline:       | Pangea Airlines    |
@@ -71,3 +71,18 @@ Scenario: Invalid Flight Search - Departure Date After Arrival Date
     | Airline:       | Pangea Airlines    |
   And I press the Continue button
   Then the "Invalid Date Range" message is displayed
+
+Scenario: Find a flight on a non-existent day
+    Given I am on the Mercury Tours homepage
+    And I click the "Flights" link
+    And I enter the required fields as show below for my flight
+    | Type:          | Round Trip           |
+    | Passengers:    | 4                    |
+    | Departing From:| San Francisco        |
+    | On:            | February 31          |
+    | Arriving In:   | Seattle              |
+    | Returning:     | April 10             |
+    | Service Class: | Business Class       |
+    | Airline:       | Blue Skies Airlines  |
+    When I press the Continue button
+    Then the "Invalid Date" message is displayed
