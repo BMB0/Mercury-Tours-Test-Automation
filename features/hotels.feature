@@ -7,3 +7,9 @@ Scenario: Accessing Hotels Page
   Given I am on the Mercury Tours homepage
   When I click the "Hotels" link
   Then the "UNDER CONSTRUCTION" image is displayed
+
+@log_in_user
+Scenario: Accessing Hotels Page as a logged-in user   
+  Given I am on the Mercury Tours homepage
+  When I click the "Hotels" link
+  Then the "UNDER CONSTRUCTION" image is displayed
