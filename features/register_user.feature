@@ -35,7 +35,7 @@ Scenario: Register a user on site
     |Address:           | Av. America #123   |	
     |City: 	            | Cochabamba         |
     |State/Province:    |                    | 	
-    |Postal Code: 	    | 9897               |
+    |Postal Code: 	    | 9897.              |
     |Country: 	        | BOLIVIA            |
     |User Name: 	      |                    |
     |Password:          | ILoveQA            | 
