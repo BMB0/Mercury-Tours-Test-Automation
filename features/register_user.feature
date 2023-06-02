@@ -193,3 +193,22 @@ Scenario: Register a user on site missing State
     |Confirm Password: | ILoveQA            |
 	And send my registration form
 	Then the put valid inputs message is displayed
+
+Scenario: Register a user on site missing Postal Code      
+	Given I am on the Mercury Tours homepage
+	And I click the "Register" link
+	When I enter the required fields as show below
+	  |First Name: 	     | Pepito             |
+    |Last Name: 	     | Perez              |
+    |Phone: 	         | 1234-567-12        |
+    |Email: 	         | pepe@pepazo.com    |
+    |Address:          | Av. America #123   |
+    |City: 	           | Cochabamba         |
+    |State/Province:   | Cochabamba         | 	
+    |Postal Code: 	   |                    |
+    |Country: 	       | BOLIVIA            |
+    |User Name: 	     | Pepazo             |
+    |Password:         | ILoveQA            | 
+    |Confirm Password: | ILoveQA            |
+	And send my registration form
+	Then the put valid inputs message is displayed
