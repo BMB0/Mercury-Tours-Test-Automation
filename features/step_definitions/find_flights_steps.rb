@@ -3,10 +3,9 @@ When(/^I press the Continue button$/) do
   find(:xpath, xpath).click
 end
 
-Then('the no seats avaiable message is displayed') do
-  expect(page).to have_content('After flight finder - No Seats Avaialble')
+Then('the {string} message is displayed') do |string|
+  expect(page).to have_content(string)
 end
-
 
 When('I enter the required fields as show below for my flight') do |table|
   data = table.rows_hash
