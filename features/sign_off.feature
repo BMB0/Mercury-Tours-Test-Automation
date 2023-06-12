@@ -8,5 +8,5 @@ Scenario: Sign-Off a user off the site
   And I click the "SIGN-ON" link
   And I enter my user and password
   And I press the Submit button
-  When I press the "SIGN-OFF" link
-  Then the home page display 
+  When I click the "SIGN-OFF" link
+  Then I am on the Mercury Tours homepage
