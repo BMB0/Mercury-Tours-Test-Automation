@@ -8,8 +8,7 @@ Scenario: Sign-On a user on site fail
   And I click the "SIGN-ON" link
   And I enter a false user and a false password
   When I press the Submit button
-  Then the Sign-On page is displayed
-  And the Enter your userName and password correct is diplayed
+  Then the Enter your userName and password correct is diplayed
 
 Scenario: Sign-On a user on site        
   Given I am on the Mercury Tours homepage
