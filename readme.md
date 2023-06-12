@@ -4,6 +4,7 @@
 ## Descripción
 
 Mercury Tours es una página web de viajes y turismo que ofrece una amplia selección de paquetes turísticos, reservas de vuelos, hoteles y alquiler de automóviles. Con un diseño moderno y fácil de usar, te brinda la oportunidad de explorar destinos emocionantes y encontrar las mejores ofertas para tus aventuras de viaje.
+
 La automatización de pruebas con Cucumber y Capybara en Mercury Tours mejora la eficiencia y calidad del proceso de pruebas, permitiendo ejecutar escenarios de prueba de manera rápida y precisa para identificar y solucionar problemas de forma eficiente
 
 ## Requerimientos

@@ -6,10 +6,10 @@ Feature: Mercury Tours Access Contact
 Scenario: Accessing Vacations Page      
   Given I am on the Mercury Tours homepage
   When I click the "CONTACT" link
-  Then the "UNDER CONSTRUCTION" image is displayed
+  Then the "UNDER CONSTRUCTION" message  is displayed on a yellow background
 
 @log_in_user
 Scenario: Accessing Vacations Page as a logged-in user   
   Given I am on the Mercury Tours homepage
   When I click the "CONTACT" link
-  Then the "UNDER CONSTRUCTION" image is displayed
+  Then the "UNDER CONSTRUCTION" message  is displayed on a yellow background

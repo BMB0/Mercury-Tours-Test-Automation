@@ -35,6 +35,6 @@ When(/^I press the "([^"]*)" button$/) do |_arg1|
   find(:xpath, xpath).click
 end
 
-Then(/^the "UNDER CONSTRUCTION" image is displayed$/) do
+Then(/^the "UNDER CONSTRUCTION" message  is displayed on a yellow background$/) do
   expect(page).to have_xpath('//img[@src="images/mast_construction.gif"]')
 end
