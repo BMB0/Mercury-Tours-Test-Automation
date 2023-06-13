@@ -1,13 +1,16 @@
 
-Given(/^I enter a false user and a false password$/) do
-  fill_in 'userName', with: ENV['FALSE_USER']
-  fill_in 'password', with: ENV['FALSE_PSW']
+When(/^I enter the user "([^"]*)"$/) do |user|
+  if ENV[user]
+    fill_in 'userName', with: ENV[user]
+  else
+    fill_in 'userName', with: user
+  end
 end
 
-Then(/^the login successfully message is displayed$/) do
-  expect(page).to have_content('Login Successfully')
-end
-
-Then(/^the Enter your userName and password correct is diplayed$/) do
-  expect(page).to have_content('Enter your userName and password correct')
+When(/^I enter the password "([^"]*)"$/) do |password|
+  if ENV[password]
+    fill_in 'password', with: ENV[password]
+  else
+    fill_in 'password', with: password
+  end
 end
