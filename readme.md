@@ -50,11 +50,11 @@ Correr Smoke Test o BVT
 ```bash
 ...\Mercury-Tours-Test-Automation> cucumber features -t @BVT
 ```
-Exportar reporte como HTML del Smoke Test o BVT
+Exportar reporte como HTML del Smoke Test o BVT y lo guarda en la carpeta reports
 ```bash
-...\Mercury-Tours-Test-Automation> cucumber features -t @BVT -f html -o Smoke_test_report.html
+...\Mercury-Tours-Test-Automation> cucumber features -t @BVT -f html -o reports/Smoke_test_report.html
 ```
-Exportar reporte como HTML de todos las features
+Exportar reporte como HTML de todas las features y lo guarda en la carpeta reports
 ```bash
-...\Mercury-Tours-Test-Automation> cucumber features -f html -o all_features_report.html
+...\Mercury-Tours-Test-Automation> cucumber features -f html -o reports/all_features_report.html
 ```
