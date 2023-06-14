@@ -3,7 +3,6 @@ Feature: Mercury Tours Sign-On
   As a registered user
   I want to sign on to the website
 
-@test
 @BVT
 Scenario Outline: Sign-On a user
   Given I am on the Mercury Tours homepage
