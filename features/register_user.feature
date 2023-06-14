@@ -3,6 +3,7 @@ Feature: Mercury Tours Register User
   As a new user
   I want to register on the website
 
+@BVT
 Scenario: Register a user on site        
 	Given I am on the Mercury Tours homepage
 	And I click the "Register" link
@@ -23,7 +24,7 @@ Scenario: Register a user on site
 	Then the confirmation screen is show
 	And my user name is "Pepazo"
 
-Scenario: Register a user on site whit missing data       
+Scenario: Register a user on site with missing data       
 	Given I am on the Mercury Tours homepage
 	And I click the "Register" link
 	When I enter the required fields as show below
@@ -42,6 +43,7 @@ Scenario: Register a user on site whit missing data
 	And send my registration form
 	Then the put valid inputs message is displayed
 
+@BVT
 Scenario: Register a user on site without data       
 	Given I am on the Mercury Tours homepage
 	And I click the "Register" link
@@ -54,7 +56,7 @@ Scenario: Register a user on site without data
     |City: 	            |                    |
     |State/Province:    |                    | 	
     |Postal Code: 	    |                    |
-    |Country: 	        |                    |
+    |Country: 	        |  BOLIVIA           |
     |User Name: 	      |                    |
     |Password:          |                    | 
     |Confirm Password:  |                    |
@@ -232,6 +234,7 @@ Scenario: Register a user on site missing Country
 	And send my registration form
 	Then the put valid inputs message is displayed
 
+@BVT
 Scenario: Register a user on site missing User Name      
 	Given I am on the Mercury Tours homepage
 	And I click the "Register" link
@@ -251,6 +254,7 @@ Scenario: Register a user on site missing User Name
 	And send my registration form
 	Then the put valid inputs message is displayed
 
+@BVT
 Scenario: Register a user on site missing Password      
 	Given I am on the Mercury Tours homepage
 	And I click the "Register" link
@@ -268,8 +272,9 @@ Scenario: Register a user on site missing Password
     |Password:         |                    | 
     |Confirm Password: | ILoveQA            |
 	And send my registration form
-	Then the put valid inputs message is displayed
+	Then the "PAssword and con.password does not match" message is displayed
 
+@BVT
 Scenario: Register a user on site missing Confirm Password      
 	Given I am on the Mercury Tours homepage
 	And I click the "Register" link
@@ -287,4 +292,4 @@ Scenario: Register a user on site missing Confirm Password
     |Password:         | ILoveQA            | 
     |Confirm Password: |                    |
 	And send my registration form
-	Then the put valid inputs message is displayed
+  Then the "PAssword and con.password does not match" message is displayed

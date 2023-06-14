@@ -3,6 +3,7 @@ Feature: Mercury Tours Find Flights
   As a customer
   I want to search for available flights
 
+@BVT
 @log_in_user
 Scenario: Find a flight with a logged-in user
     Given I am on the Mercury Tours homepage
@@ -19,6 +20,7 @@ Scenario: Find a flight with a logged-in user
     When I press the Continue button
     Then the "No Seats Avaialble" message is displayed
 
+@BVT
 Scenario: Find a flight
     Given I am on the Mercury Tours homepage
     And I click the "Flights" link

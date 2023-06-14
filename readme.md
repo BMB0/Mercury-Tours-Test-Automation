@@ -46,3 +46,15 @@ Para correr scenarios especificos por tags
 ```bash
 ...\Mercury-Tours-Test-Automation> cucumber features\[feature_file_name.feature] -t @[tag_name]
 ```
+Correr Smoke Test o BVT
+```bash
+...\Mercury-Tours-Test-Automation> cucumber features -t @BVT
+```
+Exportar reporte como HTML del Smoke Test o BVT
+```bash
+...\Mercury-Tours-Test-Automation> cucumber features -t @BVT -f html -o Smoke_test_report.html
+```
+Exportar reporte como HTML de todos las features
+```bash
+...\Mercury-Tours-Test-Automation> cucumber features -f html -o all_features_report.html
+```

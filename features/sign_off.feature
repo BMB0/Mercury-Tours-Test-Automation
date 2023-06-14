@@ -3,6 +3,7 @@ Feature: Mercury Tours Sign-Off
   As a registered user
   I want to sign off the website
 
+@BVT
 Scenario: Sign-Off a user off the site       
   Given I am on the Mercury Tours homepage
   And I click the "SIGN-ON" link

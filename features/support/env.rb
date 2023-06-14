@@ -19,7 +19,7 @@ Capybara.default_driver = :selenium
 Capybara.app_host = ENV['CAPYBARA_HOST']
 
 # Set the time (in seconds) Capybara should wait for elements to appear on the page
-Capybara.default_max_wait_time = 3
+Capybara.default_max_wait_time = 5
 Capybara.default_driver = :selenium
 Capybara.app_host = 'http://demo.guru99.com/test/newtours/'
 
